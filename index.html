@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://unpkg.com/lucide-static@0.321.0/font/lucide.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#FAFAFA]">
+    <!-- Left Sidebar -->
+    <aside class="fixed top-0 left-0 w-[72px] xl:w-[244px] bg-white border-r border-gray-300 z-50 hidden lg:grid grid-rows-[10] h-screen">
+        <!-- Logo -->
+        <div class="px-3 xl:px-5 flex items-center">
+            <!-- Instagram icon for small sidebar -->
+            <svg class="w-6 h-6 xl:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 6.5h.01M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm11 14.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- Full Instagram logo for expanded sidebar -->
+            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" 
+                 alt="Instagram" 
+                 class="hidden xl:block w-[103px]">
+        </div>
+
+        <!-- Home -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="home" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px] font-medium">Home</span>
+        </a>
+
+        <!-- Search -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="search" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Search</span>
+        </a>
+
+        <!-- Explore -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Explore</span>
+        </a>
+
+        <!-- Reels -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="film" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Reels</span>
+        </a>
+
+        <!-- Messages -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Messages</span>
+        </a>
+
+        <!-- Notifications -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Notifications</span>
+        </a>
+
+        <!-- Create -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="plus-square" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">Create</span>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <img src="https://picsum.photos/32/32?random=user" 
+                 alt="Profile" 
+                 class="w-6 h-6 rounded-full object-cover">
+            <span class="hidden xl:block text-[16px]">Profile</span>
+        </a>
+
+        <!-- More -->
+        <a href="#" class="px-3 xl:px-5 flex items-center gap-4 hover:bg-gray-100 rounded-lg">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+            <span class="hidden xl:block text-[16px]">More</span>
+        </a>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="lg:ml-[72px] xl:ml-[244px] min-h-screen">
+        <div class="max-w-[975px] mx-auto flex">
+            <!-- Center Feed -->
+            <main class="flex-1 max-w-[630px] px-4 pt-6 pb-16">
+                <!-- Stories -->
+                <div class="bg-[#FAFAFA] rounded-xl mb-4">
+                    <!-- Stories Container with fixed width -->
+                    <div class="max-w-[750px] mx-auto px-4 py-4">
+                        <!-- Stories Grid -->
+                        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-2">
+                            <!-- Story 1 (Your Story) -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story1" 
+                                                 alt="Your Story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                    <button class="absolute -bottom-0.5 -right-0.5 bg-blue-500 rounded-full w-4 h-4 flex items-center justify-center border-2 border-white">
+                                        <i data-lucide="plus" class="w-2.5 h-2.5 text-white"></i>
+                                    </button>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">Your Story</span>
+                            </div>
+
+                            <!-- Story 2 -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story2" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">emma_22</span>
+                            </div>
+
+                            <!-- Story 3 -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story3" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">travel_mike</span>
+                            </div>
+
+                            <!-- Story 4 -->
+                            <div class="flex flex-col items-center">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story4" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">photo_lisa</span>
+                            </div>
+
+                            <!-- Story 5 -->
+                            <div class="flex flex-col items-center sm:block hidden">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story5" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">john_doe</span>
+                            </div>
+
+                            <!-- Story 6 -->
+                            <div class="flex flex-col items-center sm:block hidden">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story6" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">art_gallery</span>
+                            </div>
+
+                            <!-- Story 7 -->
+                            <div class="flex flex-col items-center md:block hidden">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story7" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">nature_lens</span>
+                            </div>
+
+                            <!-- Story 8 -->
+                            <div class="flex flex-col items-center lg:block hidden">
+                                <div class="w-12 sm:w-14 h-12 sm:h-14 relative mb-1.5">
+                                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600 p-[2px]">
+                                        <div class="w-full h-full rounded-full border-2 border-white">
+                                            <img src="https://picsum.photos/200/200?random=story8" 
+                                                 alt="user_story" 
+                                                 class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] sm:text-xs font-medium text-center w-full truncate">food_stories</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts Feed -->
+                <div class="space-y-4">
+                    <!-- Post 1 -->
+                    <article class="bg-[#FAFAFA] rounded-xl">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=post1" 
+                                     alt="user_post1" 
+                                     class="w-8 h-8 rounded-full object-cover">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="text-sm font-semibold">adventure_time</h4>
+                                        <span class="text-xs text-gray-500">• 2h</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Bali, Indonesia</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-600">
+                                <i data-lucide="more-horizontal" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+
+                        <div class="relative aspect-square">
+                            <img src="https://picsum.photos/600/600?random=post1" 
+                                 alt="Post content" 
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="px-4 py-3">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="heart" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="send" class="w-6 h-6"></i>
+                                    </button>
+                                </div>
+                                <button class="hover:text-gray-600 transition-colors">
+                                    <i data-lucide="bookmark" class="w-6 h-6"></i>
+                                </button>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="font-semibold text-sm">12,345 likes</p>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">adventure_time</span>
+                                    Paradise found 🌴 Living my best life in Bali! #travel #wanderlust #balilife
+                                </p>
+                            </div>
+
+                            <button class="text-gray-500 text-sm mb-2">View all 284 comments</button>
+                            <div class="space-y-1">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">traveler_jane</span>
+                                    This looks amazing! 😍
+                                </p>
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">photo_enthusiast</span>
+                                    Perfect shot! 📸✨
+                                </p>
+                            </div>
+
+                            <p class="text-xs text-gray-500 mt-2 uppercase">2 hours ago</p>
+                        </div>
+
+                        <div class="flex items-center border-t border-gray-300 px-4 py-3">
+                            <button class="mr-3">
+                                <i data-lucide="smile" class="w-6 h-6"></i>
+                            </button>
+                            <input type="text" placeholder="Add a comment..." 
+                                   class="flex-1 text-sm outline-none placeholder-gray-500">
+                            <button class="text-blue-500 font-semibold text-sm ml-3 opacity-50">Post</button>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="bg-[#FAFAFA] rounded-xl">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=post2" 
+                                     alt="user_post2" 
+                                     class="w-8 h-8 rounded-full object-cover">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="text-sm font-semibold">foodie_adventures</h4>
+                                        <span class="text-xs text-gray-500">• 5h</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">New York, USA</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-600">
+                                <i data-lucide="more-horizontal" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+
+                        <div class="relative aspect-square">
+                            <img src="https://picsum.photos/600/600?random=post2" 
+                                 alt="Post content" 
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="px-4 py-3">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="heart" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="send" class="w-6 h-6"></i>
+                                    </button>
+                                </div>
+                                <button class="hover:text-gray-600 transition-colors">
+                                    <i data-lucide="bookmark" class="w-6 h-6"></i>
+                                </button>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="font-semibold text-sm">8,721 likes</p>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">foodie_adventures</span>
+                                    The perfect brunch doesn't exi— 🍳 #foodie #nyc #brunchgoals
+                                </p>
+                            </div>
+
+                            <button class="text-gray-500 text-sm mb-2">View all 156 comments</button>
+                            <div class="space-y-1">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">food_lover</span>
+                                    Need this in my life! 🤤
+                                </p>
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">nyc_eats</span>
+                                    Where is this? Looks amazing! 👌
+                                </p>
+                            </div>
+
+                            <p class="text-xs text-gray-500 mt-2 uppercase">5 hours ago</p>
+                        </div>
+
+                        <div class="flex items-center border-t border-gray-300 px-4 py-3">
+                            <button class="mr-3">
+                                <i data-lucide="smile" class="w-6 h-6"></i>
+                            </button>
+                            <input type="text" placeholder="Add a comment..." 
+                                   class="flex-1 text-sm outline-none placeholder-gray-500">
+                            <button class="text-blue-500 font-semibold text-sm ml-3 opacity-50">Post</button>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="bg-[#FAFAFA] rounded-xl">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=post3" 
+                                     alt="user_post3" 
+                                     class="w-8 h-8 rounded-full object-cover">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="text-sm font-semibold">nature_captures</h4>
+                                        <span class="text-xs text-gray-500">• 8h</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Yosemite National Park</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-600">
+                                <i data-lucide="more-horizontal" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+
+                        <div class="relative aspect-square">
+                            <img src="https://picsum.photos/600/600?random=post3" 
+                                 alt="Post content" 
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="px-4 py-3">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="heart" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="hover:text-gray-600 transition-colors">
+                                        <i data-lucide="send" class="w-6 h-6"></i>
+                                    </button>
+                                </div>
+                                <button class="hover:text-gray-600 transition-colors">
+                                    <i data-lucide="bookmark" class="w-6 h-6"></i>
+                                </button>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="font-semibold text-sm">15,432 likes</p>
+                            </div>
+
+                            <div class="mb-2">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">nature_captures</span>
+                                    Mother Nature showing off again 🏔️ #yosemite #naturephotography #wilderness
+                                </p>
+                            </div>
+
+                            <button class="text-gray-500 text-sm mb-2">View all 342 comments</button>
+                            <div class="space-y-1">
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">outdoor_enthusiast</span>
+                                    Breathtaking view! 🌲
+                                </p>
+                                <p class="text-sm">
+                                    <span class="font-semibold mr-1">hiking_life</span>
+                                    Adding this to my bucket list! 🏔️
+                                </p>
+                            </div>
+
+                            <p class="text-xs text-gray-500 mt-2 uppercase">8 hours ago</p>
+                        </div>
+
+                        <div class="flex items-center border-t border-gray-300 px-4 py-3">
+                            <button class="mr-3">
+                                <i data-lucide="smile" class="w-6 h-6"></i>
+                            </button>
+                            <input type="text" placeholder="Add a comment..." 
+                                   class="flex-1 text-sm outline-none placeholder-gray-500">
+                            <button class="text-blue-500 font-semibold text-sm ml-3 opacity-50">Post</button>
+                        </div>
+                    </article>
+                </div>
+            </main>
+
+            <!-- Right Sidebar -->
+            <aside class="hidden lg:block w-[320px] pt-12 ml-24">
+                <!-- User Profile -->
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center gap-4">
+                        <img src="https://picsum.photos/56/56?random=profile" 
+                             alt="Your Profile" 
+                             class="w-14 h-14 rounded-full object-cover ring-2 ring-gray-200">
+                        <div class="flex flex-col">
+                            <h2 class="font-semibold text-sm">your_username</h2>
+                            <p class="text-gray-500 text-sm">Your Name</p>
+                        </div>
+                    </div>
+                    <button class="text-blue-500 text-xs font-semibold hover:text-blue-700 transition-colors">
+                        Switch
+                    </button>
+                </div>
+
+                <!-- Suggestions -->
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-gray-500 font-semibold text-sm">Suggestions For You</h3>
+                        <a href="#" class="text-xs font-semibold hover:text-gray-500">See All</a>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- Suggestion Items -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=sugg1" 
+                                     alt="Suggested User" 
+                                     class="w-9 h-9 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-semibold">photography_pro</p>
+                                    <p class="text-xs text-gray-500">Followed by user1 + 8 more</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold hover:text-blue-700">
+                                Follow
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=sugg2" 
+                                     alt="Suggested User" 
+                                     class="w-9 h-9 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-semibold">travel_diary</p>
+                                    <p class="text-xs text-gray-500">New to Instagram</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold hover:text-blue-700">
+                                Follow
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=sugg3" 
+                                     alt="Suggested User" 
+                                     class="w-9 h-9 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-semibold">food_stories</p>
+                                    <p class="text-xs text-gray-500">Followed by foodie + 3 more</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold hover:text-blue-700">
+                                Follow
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=sugg4" 
+                                     alt="Suggested User" 
+                                     class="w-9 h-9 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-semibold">art_gallery</p>
+                                    <p class="text-xs text-gray-500">Followed by creative + 12 more</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold hover:text-blue-700">
+                                Follow
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/32/32?random=sugg5" 
+                                     alt="Suggested User" 
+                                     class="w-9 h-9 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <p class="text-sm font-semibold">fitness_journey</p>
+                                    <p class="text-xs text-gray-500">Followed by health + 5 more</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold hover:text-blue-700">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Footer Links -->
+                    <div class="mt-8 space-y-4">
+                        <nav class="flex flex-wrap gap-x-2 gap-y-1 text-xs text-gray-400">
+                            <a href="#" class="hover:underline">About</a>•
+                            <a href="#" class="hover:underline">Help</a>•
+                            <a href="#" class="hover:underline">Press</a>•
+                            <a href="#" class="hover:underline">API</a>•
+                            <a href="#" class="hover:underline">Jobs</a>•
+                            <a href="#" class="hover:underline">Privacy</a>•
+                            <a href="#" class="hover:underline">Terms</a>•
+                            <a href="#" class="hover:underline">Locations</a>•
+                            <a href="#" class="hover:underline">Language</a>•
+                            <a href="#" class="hover:underline">Meta Verified</a>
+                        </nav>
+                        <p class="text-xs text-gray-400">© 2025 INSTAGRAM FROM META</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 lg:hidden z-50">
+        <div class="flex justify-around items-center py-2">
+            <a href="#" class="p-2">
+                <i data-lucide="home" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="p-2">
+                <i data-lucide="search" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="p-2">
+                <i data-lucide="plus-square" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="p-2">
+                <i data-lucide="film" class="w-6 h-6"></i>
+            </a>
+            <a href="#" class="p-2">
+                <img src="https://picsum.photos/32/32?random=nav" 
+                     alt="Profile" 
+                     class="w-6 h-6 rounded-full object-cover">
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
